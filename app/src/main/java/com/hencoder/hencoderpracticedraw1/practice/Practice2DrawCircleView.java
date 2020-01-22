@@ -10,7 +10,7 @@ import android.view.View;
 
 public class Practice2DrawCircleView extends View {
 
-    private Paint mPaint = new Paint();
+    private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice2DrawCircleView(Context context) {
         super(context);

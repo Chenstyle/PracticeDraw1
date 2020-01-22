@@ -2,11 +2,14 @@ package com.hencoder.hencoderpracticedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice3DrawRectView extends View {
+    private Paint mPaint = new Paint();
 
     public Practice3DrawRectView(Context context) {
         super(context);
@@ -25,5 +28,13 @@ public class Practice3DrawRectView extends View {
         super.onDraw(canvas);
 
 //        练习内容：使用 canvas.drawRect() 方法画矩形
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setColor(Color.BLACK);
+        // 根据View本身尺寸确定居中矩形
+        int left = getWidth() / 4;
+        int top = getHeight() / 4;
+        int right = left * 3;
+        int bottom = top * 3;
+        canvas.drawRect(left, top, right, bottom, mPaint);
     }
 }
