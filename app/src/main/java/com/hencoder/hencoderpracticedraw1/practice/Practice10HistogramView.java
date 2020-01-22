@@ -100,5 +100,8 @@ public class Practice10HistogramView extends View {
         canvas.drawRect(x7, coordinateY, x7 + mDataWidth, y7, mPaint);
         mPaint.setColor(Color.WHITE);
         canvas.drawText(mDataName[6], x7, coordinateY + 40, mPaint);
+
+        mPaint.setTextSize(36);
+        canvas.drawText("直方图", 200, 100, mPaint);
     }
 }
